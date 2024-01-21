@@ -1,0 +1,7 @@
+venv/
+.idea
+main.py
+manage.py
+.env
+bot_info
+.coverage

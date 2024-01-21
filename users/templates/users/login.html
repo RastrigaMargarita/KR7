@@ -1,0 +1,14 @@
+{% block content %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="col-12">
+
+
+        {{ form.as_p }}
+
+        <button type="submit" class="btn btn-lg btn-block btn-outline-primary">Войти</button>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary"><a href="{% url 'send_password' %}">Я
+            не помню пароль</a></button>
+    </div>
+</form>
+{% endblock %}
