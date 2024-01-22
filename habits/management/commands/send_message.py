@@ -28,7 +28,6 @@ class Command(BaseCommand):
                 if log_record.last_send < \
                         (current_date - timedelta(days=habit.periodity)):
                     self.send_habit(habit.action, user.telegram_id)
-                    print("Отправляю второй раз")
                     log_record.last_send = current_date
                     log_record.save()
 
